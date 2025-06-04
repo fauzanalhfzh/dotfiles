@@ -1,0 +1,6 @@
+code --classic
+discord
+brave
+alacritty --classic
+android-studio --classic
+vlc
