@@ -21,7 +21,7 @@ colors:
 
     cursor:
     text: '0x282a36'
-    cursor: '0xff79c6'
+    style: Beam
 
   selection:
     text: '0xf8f8f2'
@@ -46,7 +46,4 @@ colors:
     magenta: '0xff92df'
     cyan:    '0xa4ffff'
     white:   '0xffffff'
-
-cursor:
-  style: Beam
-  blink: true
+  
