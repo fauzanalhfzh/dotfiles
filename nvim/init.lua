@@ -1,3 +1,2 @@
-require("zen.core")
-require("zen.lazy")
-
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
