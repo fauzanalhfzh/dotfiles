@@ -17,10 +17,19 @@ else
 	echo "✅ Oh My Zsh sudah terinstal."
 fi
 
+# Install Powerlevel10k theme
+P10K_DIR="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+if [ ! -d "$P10K_DIR" ]; then
+	echo "⚡ Menginstal Powerlevel10k theme..."
+	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$P10K_DIR"
+else
+	echo "✅ Powerlevel10k sudah terinstal."
+fi
+
 # Custom theme/plugin
-if [ ! -d "$(dirname "$0")/custom" ]; then
+if [ -d "$(dirname "$0")/custom" ]; then
 	echo "🔧 Menyalin custom zsh plugins/themes..."
-	cp -r "$(dirname "$0$)/custom"/* "$HOME/oh-my-zsh/custom/"
+	cp -r "$(dirname "$0")/custom"/* "$HOME/oh-my-zsh/custom/"
 fi
 
 # Ganti SHELL default ke zsh

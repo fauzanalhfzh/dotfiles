@@ -1,0 +1,42 @@
+[user]
+	name = fauzanalhfzh
+	email = zenbangga@gmail.com
+
+[init]
+	defaultBranch = main
+
+[push]
+	autoSetupRemote = true
+	default = current
+
+[pull]
+	rebase = true
+
+[fetch]
+	prune = true
+
+[rebase]
+	autoStash = true
+
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	ci = commit
+	lg = log --graph --oneline --all --decorate
+	lgg = log --graph --oneline --all --decorate --show-signature
+	amend = commit --amend --no-edit
+	unstage = reset HEAD --
+	undo = reset --soft HEAD~1
+	last = log -1 HEAD
+	diffc = diff --cached
+	discard = restore .
+	who = shortlog -sn --no-merges
+	create = "!f() { mkdir -p \"$1\" && cd \"$1\" && git init && gh repo create \"$1\" --source=. --remote=origin --push; }; f"
+	ad = add
+	df = diff
+	sw = switch
+	rs = restore
+	pl = pull
+	ps = push
+	ap = add --patch
